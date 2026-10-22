@@ -13,7 +13,7 @@ the infrastructure that serves them, and the evaluations that prove they work.
 | [**Spark vs MapReduce vs DuckDB**](https://github.com/vik-bit/nyc-taxi-mapreduce-spark-duckdb) | The same analytics workloads on three engines, with measured timings | Python · Spark · DuckDB |
 | [**Kubernetes CNI benchmarks**](https://github.com/vik-bit/GROUP6_GRSPROJECT) | Led a team of 5 benchmarking Flannel, Calico and Cilium networking on a Kind cluster | Kubernetes · Python |
 
-**Also:** tech lead on [RecipeDB 3.0](https://cosylab.iiitd.edu.in/recipedb3) (IIIT Delhi research) · frontend intern at
+**Also:** Tech lead on [RecipeDB 3.0](https://cosylab.iiitd.edu.in/recipedb3) (IIIT Delhi research) · frontend intern at
 Be10x AI (a code editor used by 600K+ learners) · Codeforces [1563](https://codeforces.com/profile/BikiByte)
 
 **Tools:** Python · C/C++ · TypeScript · FastAPI · Next.js · Docker · Kubernetes · MLflow · Kafka · Spark · PostgreSQL · AWS
