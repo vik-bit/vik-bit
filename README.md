@@ -4,6 +4,14 @@ M.Tech CSE student at **IIIT Delhi**. I build **systems and AI infrastructure fr
 up**: query engines, vector search, container runtimes and networking, and the LLM applications
 on top. My main projects are tested in CI and measured against the established system they
 imitate: DuckDB, hnswlib, FAISS, Flannel and runc.
+**AI systems**
+
+| Project | What it is | Stack |
+|---|---|---|
+| [**PolicyPilot**](https://github.com/vik-bit/policypilot) | Agentic RAG that maps new regulations to the policy clauses they affect, drafts the changes and verifies every quote. The agent beats a no-AI baseline (100% vs 85% precision, 96% vs 50% impact labels; **McNemar p = 0.0002**), with a pre-registered evaluation, a held-out set of real Indian regulations and prompt-injection tests | Python · LLM agents · hybrid search · FastAPI |
+| [**MLOps Platform**](https://github.com/vik-bit/mlops-platform) · [live](https://mlops-frontend-5smr.onrender.com/) | Train, deploy and monitor ML models, with experiment tracking, drift detection and an LLM copilot that answers from live platform data | Python · MLflow · Docker · TypeScript |
+
+
 
 **Systems**
 
@@ -13,12 +21,7 @@ imitate: DuckDB, hnswlib, FAISS, Flannel and runc.
 | [**vecdex**](https://github.com/vik-bit/vecdex) | HNSW vector search engine from scratch, with SIMD distance kernels and parallel graph construction. **Same recall as hnswlib and FAISS on SIFT1M** (0.999 recall@10). Its benchmarks exposed a race in parallel builds, fixed and checked with ThreadSanitizer | C++17 · AVX2 / NEON · pybind11 |
 | [**minirun**](https://github.com/vik-bit/minirun) | Container runtime and Kubernetes CNI plugin on raw Linux primitives: namespaces, cgroups v2, a hand-assembled seccomp filter, veth and bridges. **The only CNI of a 3-node cluster, matching Flannel in the same routing mode** (24 Gbit/s pod to pod) | Go · Linux · Kubernetes |
 
-**AI systems**
 
-| Project | What it is | Stack |
-|---|---|---|
-| [**PolicyPilot**](https://github.com/vik-bit/policypilot) | Agentic RAG that maps new regulations to the policy clauses they affect, drafts the changes and verifies every quote. The agent beats a no-AI baseline (100% vs 85% precision, 96% vs 50% impact labels; **McNemar p = 0.0002**), with a pre-registered evaluation, a held-out set of real Indian regulations and prompt-injection tests | Python · LLM agents · hybrid search · FastAPI |
-| [**MLOps Platform**](https://github.com/vik-bit/mlops-platform) · [live](https://mlops-frontend-5smr.onrender.com/) | Train, deploy and monitor ML models, with experiment tracking, drift detection and an LLM copilot that answers from live platform data | Python · MLflow · Docker · TypeScript |
 
 **Data**
 
