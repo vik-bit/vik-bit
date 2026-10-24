@@ -4,6 +4,8 @@ M.Tech CSE student at **IIIT Delhi**. I build **systems and AI infrastructure fr
 up**: query engines, vector search, container runtimes and networking, and the LLM applications
 on top. My main projects are tested in CI and measured against the established system they
 imitate: DuckDB, hnswlib, FAISS, Flannel and runc.
+
+
 **AI systems**
 
 | Project | What it is | Stack |
