@@ -2,7 +2,8 @@
 
 M.Tech CSE student at **IIIT Delhi**. I build **systems and AI infrastructure from the bottom
 up**: query engines, consensus, network stacks, container runtimes, and the LLM applications on
-top. Each project is tested in CI and measured against the established system it imitates.
+top. The systems projects are tested in CI and measured against the established system they
+imitate: DuckDB, the Raft paper's guarantees, Linux's TCP, Flannel and hnswlib.
 
 **Featured projects**
 
