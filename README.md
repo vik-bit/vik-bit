@@ -11,6 +11,7 @@ system they imitate: DuckDB, hnswlib, FAISS, Flannel, runc and the Linux kernel'
 | Project | What it is | Stack |
 |---|---|---|
 | [**PolicyPilot**](https://github.com/vik-bit/policypilot) | Agentic RAG that maps new regulations to the policy clauses they affect, drafts the changes and verifies every quote. The agent beats a no-AI baseline (100% vs 85% precision, 96% vs 50% impact labels; **McNemar p = 0.0002**), with a pre-registered evaluation, a held-out set of real Indian regulations and prompt-injection tests | Python · LLM agents · hybrid search · FastAPI |
+| [**APIShift**](https://github.com/vik-bit/apishift) · [demo PR](https://github.com/vik-bit/apishift-demo/pull/1) | Agent that migrates code across breaking library upgrades (pandas 1.x → 2.x): a static analyser with dataflow type inference, exact AST codemods, and LLM fixes accepted only when the project's own tests pass. **Fixed 25/25 benchmark cases vs 44% for codemods alone and 96% for the LLM alone**, with 22% fewer tokens, and opened a verified pull request on a live repo | Python · static analysis · LLM agents · GitHub Actions |
 | [**MLOps Platform**](https://github.com/vik-bit/mlops-platform) · [live](https://mlops-frontend-5smr.onrender.com/) | Train, deploy and monitor ML models, with experiment tracking, drift detection and an LLM copilot that answers from live platform data | Python · MLflow · Docker · TypeScript |
 
 
