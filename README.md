@@ -16,7 +16,7 @@ Flannel and hnswlib.
 | [**minirun**](https://github.com/vik-bit/minirun) | Container runtime and Kubernetes CNI plugin on raw Linux primitives: namespaces, cgroups v2, a hand-assembled seccomp filter, veth and bridges. **The only CNI of a 3-node cluster, matching Flannel in the same routing mode** (24 Gbit/s pod to pod) | Go · Linux · Kubernetes |
 | [**vecdex**](https://github.com/vik-bit/vecdex) | HNSW approximate nearest-neighbour index written from scratch, with AVX2/NEON distance kernels picked at runtime and Python bindings. **Same recall as hnswlib on SIFT1M**, benchmarked against hnswlib and FAISS, and used as PolicyPilot's vector search | C++17 · SIMD · Python bindings |
 
-Also: [Kubernetes CNI benchmarks](https://github.com/vik-bit/GROUP6_GRSPROJECT): Calico and Flannel compared on a Kind cluster under Locust load (led a team of 5)
+Also: [Kubernetes CNI benchmarks](https://github.com/vik-bit/GROUP6_GRSPROJECT): Flannel, Calico and Cilium on a Kind cluster and a bare-metal kubeadm node under Locust load; Cilium moved the most data in both (led a team of 5)
 
 ### 🤖 AI & ML
 
