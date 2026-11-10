@@ -35,9 +35,10 @@ Also: [Kubernetes CNI benchmarks](https://github.com/vik-bit/GROUP6_GRSPROJECT):
 | [**MapReduce vs Spark vs DuckDB**](https://github.com/vik-bit/nyc-taxi-mapreduce-spark-duckdb) | The same NYC taxi workloads (up to 2M trips) on three engines with measured timings, and when each one fits. For example, a 2M-row join takes ~6.6 s in Spark and **~0.12 s in DuckDB** on one laptop | Python · Spark · DuckDB · mrjob |
 
 **How I work:** I build with AI coding agents, mostly Claude Code, which wrote much of the code in
-my recent projects. I choose the problems and the designs, and I don't take a result on trust: every
-headline number is checked against a reference system by tests that run in CI, and each README
-says what was measured, what wasn't, and the bugs that testing found.
+my recent projects. I choose the problems and the designs, and I don't take a result on trust. Correctness is
+checked by tests that run in CI, often against a reference (DuckDB's answers, Porcupine's
+linearizability checker, hnswlib's recall). Performance numbers come from measured runs with the
+setup stated. Each README says what was measured, what wasn't, and the bugs that testing found.
 
 **Also:** Tech lead on [RecipeDB 3.0](https://cosylab.iiitd.edu.in/recipedb3) (IIIT Delhi research) · frontend intern at
 Be10x AI (a code editor used by 600K+ learners) · Codeforces [1563](https://codeforces.com/profile/BikiByte)
