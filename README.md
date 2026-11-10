@@ -37,7 +37,7 @@ Also: [Kubernetes CNI benchmarks](https://github.com/vik-bit/GROUP6_GRSPROJECT):
 **How I work:** I build with AI coding agents, mostly Claude Code, which wrote much of the code in
 my recent projects. I choose the problems and the designs, and I don't take a result on trust. Correctness is
 checked by tests that run in CI, often against a reference (DuckDB's answers, Porcupine's
-linearizability checker, hnswlib's recall). Performance numbers come from measured runs with the
+linearizability checker, exact nearest-neighbour search). Performance numbers come from measured runs with the
 setup stated. Each README says what was measured, what wasn't, and the bugs that testing found.
 
 **Also:** Tech lead on [RecipeDB 3.0](https://cosylab.iiitd.edu.in/recipedb3) (IIIT Delhi research) · frontend intern at
