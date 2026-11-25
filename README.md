@@ -16,6 +16,14 @@ Flannel and hnswlib.
 | [**medscribe**](https://github.com/vik-bit/medscribe) | Clinical speech-to-note on PriMock57 consultations. LoRA fine-tuning of Whisper-small in a plain PyTorch loop cut held-out **WER from 15.2% to 9.5%** (paired 95% CI −7.0 to −4.4 points; adapter released). Plus a multi-agent note writer built from scratch with a grounding verifier, compared honestly with a single agent: it removed every lexically ungrounded claim but used 5× the prompt tokens and did not write better notes | Python · PyTorch · Hugging Face · LLM agents |
 | [**tinyformer**](https://github.com/vik-bit/tinyformer) | One set of transformer blocks written from scratch in PyTorch (attention, RoPE, RMSNorm, SwiGLU, grouped-query attention, KV cache) plus a byte-level BPE tokenizer, used for a GPT-style model, a Vision Transformer and CLIP. Each is checked by loading published weights: **GPT-2 logits within 9.2e-5** of Hugging Face with identical greedy text, ViT-B/16 within 1.2e-5, CLIP within 3.3e-6, and the tokenizer gives tiktoken's exact ids. Text→image search on Flickr8k runs on vecdex (**R@1 53.7**) | Python · PyTorch · transformers from scratch |
 
+### 📊 Data engineering
+
+| Project | What it is | Stack |
+|---|---|---|
+| [**Graph PageRank and recommendations**](https://github.com/vik-bit/movielens-graph-pagerank-recsys) · *coursework* | IIIT Delhi Big Data Analytics assignment on MovieLens 100K. PageRank as Pregel in Spark GraphFrames matches a hand-written version to 2.6e-18, and a PowerGraph-style vertex cut brings hub load imbalance from 2.13 to 1.00. In Neo4j, Jaccard-weighted user–user recommendations raise **Precision@10 from 0.247 to 0.355** over a common-neighbour baseline on the held-out split | Python · Spark GraphFrames · Neo4j · Cypher |
+| [**Taxi stream analytics**](https://github.com/vik-bit/kafka-taxi-stream-analytics) | Kafka pipeline that replays NYC taxi trips and checks streaming sketches (Bloom filters, reservoir sampling, HyperLogLog, DGIM, MinHash-LSH) against exact answers on the same stream. Measures partitioning, consumer scaling and lag: **HyperLogLog stays near 2% error at 11,200 events/s** | Python · Kafka · streaming algorithms |
+| [**MapReduce vs Spark vs DuckDB**](https://github.com/vik-bit/nyc-taxi-mapreduce-spark-duckdb) | The same NYC taxi workloads (up to 2M trips) on three engines with measured timings, and when each one fits. For example, a 2M-row join takes ~6.6 s in Spark and **~0.12 s in DuckDB** on one laptop | Python · Spark · DuckDB · mrjob |
+
 ### ⚙️ Systems
 
 | Project | What it is | Stack |
@@ -27,14 +35,6 @@ Flannel and hnswlib.
 | [**vecdex**](https://github.com/vik-bit/vecdex) | HNSW approximate nearest-neighbour index written from scratch, with AVX2/NEON distance kernels picked at runtime and Python bindings. **Same recall as hnswlib on SIFT1M**, benchmarked against hnswlib and FAISS, and used as PolicyPilot's vector search | C++17 · SIMD · Python bindings |
 
 Also: [Kubernetes CNI benchmarks](https://github.com/vik-bit/GROUP6_GRSPROJECT): Flannel, Calico and Cilium on a Kind cluster and a bare-metal kubeadm node under Locust load; Cilium moved the most data in both (led a team of 5)
-
-### 📊 Data engineering
-
-| Project | What it is | Stack |
-|---|---|---|
-| [**Graph PageRank and recommendations**](https://github.com/vik-bit/movielens-graph-pagerank-recsys) · *coursework* | IIIT Delhi Big Data Analytics assignment on MovieLens 100K. PageRank as Pregel in Spark GraphFrames matches a hand-written version to 2.6e-18, and a PowerGraph-style vertex cut brings hub load imbalance from 2.13 to 1.00. In Neo4j, Jaccard-weighted user–user recommendations raise **Precision@10 from 0.247 to 0.355** over a common-neighbour baseline on the held-out split | Python · Spark GraphFrames · Neo4j · Cypher |
-| [**Taxi stream analytics**](https://github.com/vik-bit/kafka-taxi-stream-analytics) | Kafka pipeline that replays NYC taxi trips and checks streaming sketches (Bloom filters, reservoir sampling, HyperLogLog, DGIM, MinHash-LSH) against exact answers on the same stream. Measures partitioning, consumer scaling and lag: **HyperLogLog stays near 2% error at 11,200 events/s** | Python · Kafka · streaming algorithms |
-| [**MapReduce vs Spark vs DuckDB**](https://github.com/vik-bit/nyc-taxi-mapreduce-spark-duckdb) | The same NYC taxi workloads (up to 2M trips) on three engines with measured timings, and when each one fits. For example, a 2M-row join takes ~6.6 s in Spark and **~0.12 s in DuckDB** on one laptop | Python · Spark · DuckDB · mrjob |
 
 **How I work:** I build with AI coding agents, mostly Claude Code, which wrote much of the code in
 my recent projects. I choose the problems and the designs, and I don't take a result on trust. Correctness is
